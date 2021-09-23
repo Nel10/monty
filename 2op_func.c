@@ -1,3 +1,4 @@
+#include "monty.h"
 /**
  * monty_add - Adds the top two values of a stack_t linked list.
  * @stack: A pointer to the top mode node of a stack_t linked list.
