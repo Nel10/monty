@@ -6,7 +6,8 @@
 void free_tokens(void)
 {
 	size_t i = 0;
-
+	char *op_toks = NULL;
+	
 	if (op_toks == NULL)
 		return;
 	for (i = 0; op_toks[i]; i++)
@@ -21,7 +22,8 @@ void free_tokens(void)
 unsigned int token_arr_len(void)
 {
 	unsigned int toks_len = 0;
-
+	char *op_toks = NULL;
+	
 	while (op_toks[toks_len])
 		toks_len++;
 	return (toks_len);
@@ -66,6 +68,16 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 		{"swap", monty_swap},
 		{"add", monty_add},
 		{"nop", monty_nop},
+		{"sub", monty_sub},
+		{"div", monty_div},
+		{"mul", monty_mul},
+		{"mod", monty_mod},
+		{"pchar", monty_pchar},
+		{"pstr", monty_pstr},
+		{"rotl", monty_rotl},
+		{"rotr", monty_rotr},
+		{"stack", monty_stack},
+		{"queue", monty_queue},
 		{NULL, NULL}
 	};
 	int i;
@@ -85,11 +97,11 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 int run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
-	char *line = NULL;
+	char *line = NULL, **op_toks = NULL;
 	size_t len = 0, exit_status = EXIT_SUCCESS;
 	unsigned int line_number = 0, prev_tok_len = 0;
 	void (*op_func)(stack_t**, unsigned int);
-
+	
 	if (init_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 	while (getline(&line, &len, script_fd) != -1)
