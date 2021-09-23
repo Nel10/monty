@@ -6,7 +6,7 @@
 void free_tokens(void)
 {
 	size_t i = 0;
-	char *op_toks = NULL;
+	char **op_toks = NULL;
 	
 	if (op_toks == NULL)
 		return;
@@ -22,7 +22,7 @@ void free_tokens(void)
 unsigned int token_arr_len(void)
 {
 	unsigned int toks_len = 0;
-	char *op_toks = NULL;
+	char **op_toks;
 	
 	while (op_toks[toks_len])
 		toks_len++;
@@ -97,7 +97,7 @@ void (*get_op_func(char *opcode))(stack_t**, unsigned int)
 int run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
-	char *line = NULL, **op_toks = NULL;
+	char *line = NULL, **op_toks;
 	size_t len = 0, exit_status = EXIT_SUCCESS;
 	unsigned int line_number = 0, prev_tok_len = 0;
 	void (*op_func)(stack_t**, unsigned int);
