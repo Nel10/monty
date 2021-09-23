@@ -3,8 +3,6 @@
 /**
  * free_tokens - Frees the global op_toks array of strings.
  */
-
-
 void free_tokens(void)
 {
 	size_t i = 0;
