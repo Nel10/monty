@@ -1,7 +1,10 @@
 #include "monty.h"
+<<<<<<< HEAD
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+=======
+>>>>>>> 1a80f3e35779d3f925cd78297ccb002ece37a9c3
 
 char **op_toks = NULL;
 
