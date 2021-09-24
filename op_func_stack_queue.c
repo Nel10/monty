@@ -24,7 +24,7 @@ void op_stack(stack_t **stack, unsigned int line_number, char **line,
  * @monty_file: Pointer to a file to be readed.
  * Return: void
  */
-void execute_queue(stack_t **stack, unsigned int line_number, char **line,
+void op_queue(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	(void)stack;

@@ -31,11 +31,10 @@ void get_op_instruc(stack_t **stack, unsigned int line_number, char *token,
 		{"stack", op_stack},
 		{"queue", op_queue},
 		{NULL, NULL}};
-	while (instruct_op[i].opcode)
+	for (i = 0; instruct_op[i].opcode != NULL; i++)
 	{
 		if (strcmp(instruct_op[i].opcode, token) == 0)
 			break;
-		i++;
 	}
 	if (instruct_op[i].opcode != NULL)
 	{
