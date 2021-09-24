@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * check_instruction - Gests the corresponding function acording to an
+ * get_op_instruc - Gests the corresponding function acording to an
  * instruction
  * @stack: Pointer to the head of a stack
  * @line_number: Number of line inside of the file
@@ -10,28 +10,28 @@
  * @monty_file: Pointer to a file to be readed.
  */
 
-void check_instruction(stack_t **stack, unsigned int line_number, char *token,
+void get_op_instruc(stack_t **stack, unsigned int line_number, char *token,
 		       char **line, FILE **monty_file)
 {
 	int i = 0;
 	instruction_t instructions[] = {
-		{"push", execute_push},
-		{"pall", execute_pall},
-		{"pint", execute_pint},
-		{"pop", execute_pop},
-		{"swap", execute_swap},
-		{"add", execute_add},
-		{"nop", execute_nop},
-		{"sub", execute_sub},
-		{"div", execute_div},
-		{"mul", execute_mul},
-		{"mod", execute_mod},
-		{"pchar", execute_pchar},
-		{"pstr", execute_pstr},
-		{"rotl", execute_rotl},
-		{"rotr", execute_rotr},
-		{"stack", execute_stack},
-		{"queue", execute_queue},
+		{"push", op_push},
+		{"pall", op_pall},
+		{"pint", op_pint},
+		{"pop", op_pop},
+		{"swap", op_swap},
+		{"add", op_add},
+		{"nop", op_nop},
+		{"sub", op_sub},
+		{"div", op_div},
+		{"mul", op_mul},
+		{"mod", op_mod},
+		{"pchar", op_pchar},
+		{"pstr", op_pstr},
+		{"rotl", op_rotl},
+		{"rotr", op_rotr},
+		{"stack", op_stack},
+		{"queue", op_queue},
 		{NULL, NULL}};
 	for (i = 0; instructions[i].opcode != NULL; i++)
 	{
