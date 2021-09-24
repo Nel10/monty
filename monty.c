@@ -16,19 +16,19 @@ int main(int argc, char **argv)
 	unsigned int line_number = 0;
 
 	if (argc != 2)
-		print_error();
+		print_error_1();
 	monty_file = fopen(argv[1], "r");
 	if (monty_file == NULL)
 	{
 		free(monty_file);
-		print_errors(argv[1]);
+		print_error_2(argv[1]);
 	}
 	while (getline(&line, &line_length, monty_file) != -1)
 	{
 		line_number++;
 		token = strtok(line, " \n\t\r");
 		if (token != NULL && token[0] != '#')
-			get_op_instruc(&stack, line_number, token, &line,
+			check_instruction(&stack, line_number, token, &line,
 					  &monty_file);
 	}
 	free(line);

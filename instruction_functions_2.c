@@ -1,16 +1,17 @@
 #include "monty.h"
 
 /**
- * op_mod - compute remainder (modulus) of second
- * element divided by top element
- * @stack: double pointer to head of stack
- * @line_number: line number of current operation
+ * execute_mod - computes the rest of the division of the second top element
+ * of the stack by the top element of the stack.
+ * @stack: Stack to work with
+ * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
- * Return: void
+ *
+ * Return: Nothing
  */
-void op_mod(stack_t **stack, unsigned int line_number, char **line,
-		FILE **monty_file)
+void execute_mod(stack_t **stack, unsigned int line_number, char **line,
+		 FILE **monty_file)
 {
 	int n = 0;
 
@@ -39,14 +40,16 @@ void op_mod(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * op_pchar - print character from top of stack
- * @stack: double pointer to top of stack
- * @line_number: line number of current operation
+ * execute_pchar -  prints the char at the top of the stack, followed by a
+ * new line.
+ * @stack: Stack to work with
+ * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
- * Return: void
+ *
+ * Return: Nothing
  */
-void op_pchar(stack_t **stack, unsigned int line_number, char **line,
+void execute_pchar(stack_t **stack, unsigned int line_number, char **line,
 		   FILE **monty_file)
 {
 	int character;
@@ -77,15 +80,16 @@ void op_pchar(stack_t **stack, unsigned int line_number, char **line,
 	printf("%c\n", character);
 }
 /**
- * op_pstr - print string from stack of ints up to null byte,
- * first non-ascii character, or end of stack
- * @stack: double pointer to head of stack
- * @line_number: line number of current operation
+ * execute_pstr -  prints the char at the top of the stack, followed by
+ * a new line.
+ * @stack: Stack to work with
+ * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
- * Return: void
+ *
+ * Return: Nothing
  */
-void op_pstr(stack_t **stack, unsigned int line_number, char **line,
+void execute_pstr(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	int character = 0;
@@ -110,14 +114,15 @@ void op_pstr(stack_t **stack, unsigned int line_number, char **line,
 	putchar('\n');
 }
 /**
- * op_rotl - rotates the stack to the top.
- * @stack:double pointer tot he begining of the linked list
- * @line_number: script line number
+ * execute_rotl -  rotates the stack to the top.
+ * @stack: Stack to work with
+ * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
- * Return: void
+ *
+ * Return: Nothing
  */
-void op_rotl(stack_t **stack, unsigned int line_number, char **line,
+void execute_rotl(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	stack_t *first = *stack;
@@ -138,14 +143,15 @@ void op_rotl(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * op_rotr - rotates the stack to the bottom.
- * @stack: double pointer to the begining of the linked list
- * @line_number: script line number
+ * execute_rotr -  rotates the stack to the bottom.
+ * @stack: Stack to work with
+ * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
- * Return: void
+ *
+ * Return: Nothing
  */
-void op_rotr(stack_t **stack, unsigned int line_number, char **line,
+void execute_rotr(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	stack_t *first = *stack;
