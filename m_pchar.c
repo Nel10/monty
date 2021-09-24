@@ -14,7 +14,7 @@ void m_pchar(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 1)
 	{
-		dprintf(STDOUT_FILENO,
+		fprintf(stderr,
 			"L%u: can't pchar, stack empty\n",
 			line_number);
 		exit(EXIT_FAILURE);
@@ -22,7 +22,7 @@ void m_pchar(stack_t **stack, unsigned int line_number)
 	ch = (*stack)->n;
 	if (!isascii(ch))
 	{
-		dprintf(STDOUT_FILENO,
+		fprintf(stderr,
 			"L%u: can't pchar, value out of range\n",
 			line_number);
 		exit(EXIT_FAILURE);

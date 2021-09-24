@@ -13,8 +13,8 @@ void m_div(stack_t **stack, unsigned int line_number)
 
 	if (var.stack_len < 2)
 	{
-		dprintf(STDOUT_FILENO,
-			"L%u: can't div, stack too short\n",
+		fprintf(stderr,
+				"L%u: can't div, stack too short\n",
 			line_number);
 		exit(EXIT_FAILURE);
 	}
