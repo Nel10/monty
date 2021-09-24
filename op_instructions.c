@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * execute_push - Add a new node at the head of the stack
+ * op_push - Add a new node at the head of the stack
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -9,7 +9,7 @@
  *
  * Return: Nothing
  */
-void execute_push(stack_t **stack, unsigned int line_number, char **line,
+void op_push(stack_t **stack, unsigned int line_number, char **line,
 				  FILE **monty_file)
 {
 	char *second_argument;
@@ -38,7 +38,7 @@ void execute_push(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_pall - Print the stack
+ * op_pall - Print the stack
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -46,7 +46,7 @@ void execute_push(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_pall(stack_t **stack, unsigned int line_number, char **line,
+void op_pall(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	if (*stack == NULL || stack == NULL)
@@ -60,7 +60,7 @@ void execute_pall(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_pint - Print the head element into the stack
+ * op_pint - Print the head element into the stack
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -68,7 +68,7 @@ void execute_pall(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_pint(stack_t **stack, unsigned int line_number, char **line,
+void op_pint(stack_t **stack, unsigned int line_number, char **line,
 				  FILE **monty_file)
 {
 
@@ -85,7 +85,7 @@ void execute_pint(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_pop - Delete the first element in the stack
+ * op_pop - Delete the first element in the stack
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -93,7 +93,7 @@ void execute_pint(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_pop(stack_t **stack, unsigned int line_number, char **line,
+void op_pop(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	if (list_len(*stack) == 0 || *stack == NULL)
@@ -109,7 +109,7 @@ void execute_pop(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_swap - swaps the top two elements of the stack.
+ * op_swap - swaps the top two elements of the stack.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -117,7 +117,7 @@ void execute_pop(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_swap(stack_t **stack, unsigned int line_number, char **line,
+void op_swap(stack_t **stack, unsigned int line_number, char **line,
 				  FILE **monty_file)
 {
 	stack_t *first = *stack;

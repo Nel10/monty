@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * execute_stack - ets the format of the data to a stack (LIFO). This is the
+ * op_stack - ets the format of the data to a stack (LIFO). This is the
  * default behavior of the program.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
@@ -10,7 +10,7 @@
  *
  * Return: Nothing
  */
-void execute_stack(stack_t **stack, unsigned int line_number, char **line,
+void op_stack(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	(void)stack;
@@ -19,7 +19,7 @@ void execute_stack(stack_t **stack, unsigned int line_number, char **line,
 	(void)monty_file;
 }
 /**
- * execute_queue - sets the format of the data to a queue (FIFO).
+ * op_queue - sets the format of the data to a queue (FIFO).
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -27,7 +27,7 @@ void execute_stack(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_queue(stack_t **stack, unsigned int line_number, char **line,
+void op_queue(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	(void)stack;

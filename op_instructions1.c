@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * execute_add - Add the 2 first (top) elements of the stack
+ * op_add - Add the 2 first (top) elements of the stack
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -8,7 +8,7 @@
  *
  * Return: Nothing
  */
-void execute_add(stack_t **stack, unsigned int line_number, char **line,
+void op_add(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	int n = 0;
@@ -29,7 +29,7 @@ void execute_add(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_nop - Do nothing
+ * op_nop - Do nothing
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -37,7 +37,7 @@ void execute_add(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_nop(stack_t **stack, unsigned int line_number, char **line,
+void op_nop(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	(void)stack;
@@ -47,7 +47,7 @@ void execute_nop(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_sub - subtracts the top element of the stack from the
+ * op_sub - subtracts the top element of the stack from the
  * second top element of the stack.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
@@ -56,7 +56,7 @@ void execute_nop(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_sub(stack_t **stack, unsigned int line_number, char **line,
+void op_sub(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	int n = 0;
@@ -76,7 +76,7 @@ void execute_sub(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_div - divides the second top element of
+ * op_div - divides the second top element of
  * the stack by the top element of the stack.
  * second top element of the stack.
  * @stack: Stack to work with
@@ -86,7 +86,7 @@ void execute_sub(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_div(stack_t **stack, unsigned int line_number, char **line,
+void op_div(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	int n = 0;
@@ -116,7 +116,7 @@ void execute_div(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_mul - multiplies the second top element of the stack
+ * op_mul - multiplies the second top element of the stack
  * with the top element of the stack.
  * second top element of the stack.
  * @stack: Stack to work with
@@ -126,7 +126,7 @@ void execute_div(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_mul(stack_t **stack, unsigned int line_number, char **line,
+void op_mul(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file)
 {
 	int n = 0;

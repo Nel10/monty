@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * execute_mod - computes the rest of the division of the second top element
+ * op_mod - computes the rest of the division of the second top element
  * of the stack by the top element of the stack.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
@@ -10,7 +10,7 @@
  *
  * Return: Nothing
  */
-void execute_mod(stack_t **stack, unsigned int line_number, char **line,
+void op_mod(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file)
 {
 	int n = 0;
@@ -40,7 +40,7 @@ void execute_mod(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_pchar -  prints the char at the top of the stack, followed by a
+ * op_pchar -  prints the char at the top of the stack, followed by a
  * new line.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
@@ -49,7 +49,7 @@ void execute_mod(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_pchar(stack_t **stack, unsigned int line_number, char **line,
+void op_pchar(stack_t **stack, unsigned int line_number, char **line,
 		   FILE **monty_file)
 {
 	int character;
@@ -80,7 +80,7 @@ void execute_pchar(stack_t **stack, unsigned int line_number, char **line,
 	printf("%c\n", character);
 }
 /**
- * execute_pstr -  prints the char at the top of the stack, followed by
+ * op_pstr -  prints the char at the top of the stack, followed by
  * a new line.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
@@ -89,7 +89,7 @@ void execute_pchar(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_pstr(stack_t **stack, unsigned int line_number, char **line,
+void op_pstr(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	int character = 0;
@@ -114,7 +114,7 @@ void execute_pstr(stack_t **stack, unsigned int line_number, char **line,
 	putchar('\n');
 }
 /**
- * execute_rotl -  rotates the stack to the top.
+ * op_rotl -  rotates the stack to the top.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -122,7 +122,7 @@ void execute_pstr(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_rotl(stack_t **stack, unsigned int line_number, char **line,
+void op_rotl(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	stack_t *first = *stack;
@@ -143,7 +143,7 @@ void execute_rotl(stack_t **stack, unsigned int line_number, char **line,
 }
 
 /**
- * execute_rotr -  rotates the stack to the bottom.
+ * op_rotr -  rotates the stack to the bottom.
  * @stack: Stack to work with
  * @line_number: The number of line inside of the file
  * @line: Pointer to a line in a file
@@ -151,7 +151,7 @@ void execute_rotl(stack_t **stack, unsigned int line_number, char **line,
  *
  * Return: Nothing
  */
-void execute_rotr(stack_t **stack, unsigned int line_number, char **line,
+void op_rotr(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file)
 {
 	stack_t *first = *stack;
