@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		line_number++;
 		token = strtok(line, " \n\t\r");
 		if (token != NULL && token[0] != '#')
-			check_instruction(&stack, line_number, token, &line,
+			get_op_instruc(&stack, line_number, token, &line,
 					  &monty_file);
 	}
 	free(line);

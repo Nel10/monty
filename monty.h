@@ -52,48 +52,48 @@ void print_error_1(void);
 void print_error_2(char *file_name);
 
 /*This function is in the check_instruction.c file*/
-void check_instruction(stack_t **stack, unsigned int line_number, char *token,
+void get_op_instruc(stack_t **stack, unsigned int line_number, char *token,
 		       char **line, FILE **monty_file);
 
 /*These function are in the instruction_functions.c file*/
-void execute_push(stack_t **stack, unsigned int line_number, char **line,
+void op_push(stack_t **stack, unsigned int line_number, char **line,
 		  FILE **monty_file);
-void execute_pall(stack_t **stack, unsigned int line_number, char **line,
+void op_pall(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
-void execute_pint(stack_t **stack, unsigned int line_number, char **line,
+void op_pint(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
-void execute_pop(stack_t **stack, unsigned int line_number, char **line,
+void op_pop(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
-void execute_swap(stack_t **stack, unsigned int line_number, char **line,
+void op_swap(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
 
 /*These function are in the instruction_functions_1.c file*/
-void execute_add(stack_t **stack, unsigned int line_number, char **line,
+void op_add(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
-void execute_nop(stack_t **stack, unsigned int line_number, char **line,
+void op_nop(stack_t **stack, unsigned int line_number, char **line,
 		 FILE **monty_file);
-void execute_sub(stack_t **stack, unsigned int line_number, char **line,
+void op_sub(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_div(stack_t **stack, unsigned int line_number, char **line,
+void op_div(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_mul(stack_t **stack, unsigned int line_number, char **line,
+void op_mul(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
 
 /*These function are in the instruction_functions_2.c file*/
-void execute_mod(stack_t **stack, unsigned int line_number, char **line,
+void op_mod(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_pchar(stack_t **stack, unsigned int line_number, char **line,
+void op_pchar(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_pstr(stack_t **stack, unsigned int line_number, char **line,
+void op_pstr(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_rotl(stack_t **stack, unsigned int line_number, char **line,
+void op_rotl(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_rotr(stack_t **stack, unsigned int line_number, char **line,
+void op_rotr(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
 /*These function are in the instruction_functions_3.c file*/
-void execute_stack(stack_t **stack, unsigned int line_number, char **line,
+void op_stack(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
-void execute_queue(stack_t **stack, unsigned int line_number, char **line,
+void op_queue(stack_t **stack, unsigned int line_number, char **line,
 				 FILE **monty_file);
 
 /*This function is in free_stack_t_list.c*/
