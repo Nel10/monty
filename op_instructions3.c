@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * op_stack - ets the format of the data to a stack (LIFO). This is the
  * default behavior of the program.
