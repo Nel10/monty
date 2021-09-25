@@ -21,9 +21,9 @@ size_t print_stack_t(const stack_t *h)
 }
 
 /**
-* push_node - adds a new node at the beginning of a stack_t list
-* @head: Pointer to the head to a double linked list
-* @n: Integer as a data for the new node
+* push_node - adds a new node at the beginning of a stack_t list.
+* @head: Pointer to the head to a double linked list.
+* @n: Integer as a data for the new node.
 *
 * Return: The address of the new element, or NULL if it failed
 */
@@ -91,7 +91,6 @@ stack_t *enqueue_node(stack_t **head, const int n)
 	}
 	return (new_node);
 }
-
 /**
  * pop_node - removes the top element of the stack.
  * @head: Pointer to the head of a stack.
@@ -112,7 +111,6 @@ int pop_node(stack_t **head)
 	free(current);
 	return (1);
 }
-
 /**
  * list_len - prints the len of a double linked list
  * @h: pointer to the head node
