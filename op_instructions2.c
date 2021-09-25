@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * op_mod - computes the rest of the division of the second top element
  * of the stack by the top element of the stack.
@@ -38,7 +37,6 @@ void op_mod(stack_t **stack, unsigned int line_number, char **line,
 	pop_node(stack);
 	(*stack)->n = (*stack)->n % n;
 }
-
 /**
  * op_pchar -  prints the char at the top of the stack, followed by a
  * new line.
