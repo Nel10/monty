@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * check_if_is_digit - Check if a gived char pointer correspond to a number
  * @arg: String to check
