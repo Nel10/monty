@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * main - Main function to execute monty
  * @argc: Number of arguments supplied to the program including ./monty string
