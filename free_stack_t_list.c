@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
 * free_stack_t - frees a stack_t list
 * @head: Pointer to the head to a double linked list
