@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * op_push - Add a new node at the head of the stack
  * @stack: Stack to work with
