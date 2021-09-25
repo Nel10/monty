@@ -1,5 +1,4 @@
 #include "monty.h"
-
 /**
  * get_op_instruc - Gests the corresponding function acording to an
  * instruction
@@ -9,7 +8,6 @@
  * @line: Pointer to a line in a file
  * @monty_file: Pointer to a file to be readed.
  */
-
 void get_op_instruc(stack_t **stack, unsigned int line_number, char *token,
 		       char **line, FILE **monty_file)
 {
