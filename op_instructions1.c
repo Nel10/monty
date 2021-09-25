@@ -25,9 +25,7 @@ void op_add(stack_t **stack, unsigned int line_number, char **line,
 	n = (*stack)->n;
 	pop_node(stack);
 	(*stack)->n += n;
-
 }
-
 /**
  * op_nop - Do nothing
  * @stack: Stack to work with
@@ -45,7 +43,6 @@ void op_nop(stack_t **stack, unsigned int line_number, char **line,
 	(void)line;
 	(void)monty_file;
 }
-
 /**
  * op_sub - subtracts the top element of the stack from the
  * second top element of the stack.
